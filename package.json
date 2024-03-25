@@ -20,6 +20,7 @@
     "typescript": "^5.4.3"
   },
   "devDependencies": {
+    "@iarna/toml": "^2.2.5",
     "@iconify-json/mdi": "^1.1.64",
     "@unocss/reset": "^0.58.6",
     "prettier": "^3.2.5",

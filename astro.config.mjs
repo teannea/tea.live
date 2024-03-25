@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config"
 import UnoCSS from "unocss/astro"
-
 import react from "@astrojs/react"
+import toml from "./toml.ts"
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,5 +10,6 @@ export default defineConfig({
     UnoCSS({
       injectReset: true,
     }),
+    toml(),
   ],
 })

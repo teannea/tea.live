@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/Layout.astro"
+
+export async function getStaticPaths() {
+  const streams = (await getCollection("streams")).map(
+    (entry: any) => entry.data
+  )
+  // FIXME: add type!
+  return streams.map((entry: any) => ({
+    params: { episode: entry.short_name },
+    props: { entry },
+  }))
+}
+const { entry } = Astro.props
+---
+
+<Layout title="f">
+  <p>{JSON.stringify(entry)}</p>
+</Layout>
