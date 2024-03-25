@@ -108,6 +108,7 @@ function Stream({ stream }) {
             id={stream.youtube_id}
             title={stream.title}
             ref={playerRef}
+            poster="maxresdefault"
           />
         </div>
         <ol
