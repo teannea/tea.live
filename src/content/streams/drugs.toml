@@ -1,6 +1,5 @@
 #[stream]
-short_name = "drugs"
+slug = "drugs"
 title = "藥物、精神與人的意識"
-# title = "English"
 date = "2024-03-21"
-url = "https://www.youtube.com/watch?v=zvf-ds61MJM"
+youtube_id = "zvf-ds61MJM"

@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/Layout.astro"
+import Stream from "../../components/Stream"
+
+export async function getStaticPaths() {
+  const streams = (await getCollection("streams")).map(
+    (entry: any) => entry.data
+  )
+  // FIXME: add type!
+  return streams.map((stream: any) => ({
+    params: { slug: stream.slug },
+    props: { stream },
+  }))
+}
+const { stream } = Astro.props
+console.log(stream)
+---
+
+<Layout title={stream.title}>
+  <Stream stream={stream} client:only />
+  <!-- <Search /> -->
+</Layout>
